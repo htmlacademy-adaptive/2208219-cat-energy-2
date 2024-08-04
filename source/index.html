@@ -13,15 +13,15 @@
   <script src="scripts/index.js" defer></script>
 </head>
 
-<body class="page__body body">
-  <main>
+<body class="body">
+  <main class="main">
     <h1 class="visually-hidden">Сайт компании Cat Energy</h1>
-    <header class="body__header header">
+    <header class="main__header header">
       <a class="logo" href="#">
         <picture>
-          <source width="70" height="59" type="image/png" media="(min-width: 1440px)" srcset="images/logo@1x.png 1x, images/logo@2x.png 2x">
-          <source width="60" height="50" type="image/png" media="(min-width: 768px)" srcset="images/logo-tablet@1x.png 1x, images/logo-tablet@2x.png 2x">
-          <img class="logo__icon" src="images/logo-mobile@1x.png" srcset="images/logo-mobile@2x.png 2x" alt="Иконка Cat Energy" width="38" height="33">
+          <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo.svg">
+          <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
+          <img class="logo__icon" src="images/logo-mobile.svg" alt="Иконка Cat Energy" width="38" height="33">
         </picture>
         <picture>
           <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text.svg">
@@ -51,7 +51,7 @@
         <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/index-can@1x.png 1x, images/index-can@2x.png 2x">
         <img class="promo__image" src="images/index-can@1x.png" srcset="images/index-can@2x.png 2x" alt="Стакан Cat Energy" width="280" height="270">
       </picture>
-      <a class="promo__link button" href="#">Подбор программы</a>
+      <a class="promo__link button" href="#">Подборать программу</a>
     </section>
     <section class="programm-of-diets">
       <h2>Программы диет</h2>
@@ -115,26 +115,30 @@
       </ul>
       <p class="example-cat__price">Затраты на питание: 15 000 Руб.</p>
       <picture>
-        <source width="560" height="512" type="image/jpg" media="(min-width: 1440px)" srcset="images/fat-cat@1x.jpg 1x, images/fat-cat@2x.jpg 2x">
-        <img class="example-cat__photo example-cat__photo--before" src="images/fat-cat@1x" srcset="images/fat-cat@2x.jpg 2x" alt="Борис до похудения вес - 13 киллограмм" width="280" height="256">
+        <source width="560" height="512" type="image/png" media="(min-width: 1440px)" srcset="images/fat-cat@1x.png 1x, images/fat-cat@2x.png 2x">
+        <img class="example-cat__photo example-cat__photo--before" src="images/fat-cat@1x.png" srcset="images/fat-cat@2x.png 2x" alt="Борис до похудения вес - 13 киллограмм" width="280" height="256">
       </picture>
       <picture>
-        <source width="560" height="512" type="image/jpg" media="(min-width: 1440px)" srcset="images/tiny-cat@1x.jpg 1x, images/tiny-cat@2x.jpg 2x">
-        <img class="example-cat__photo example-cat__photo--after" src="images/tiny-cat@1x.jpg" srcset="images/tiny-cat@2x.jpg 2x" alt="Борис после похудения вес - 8 киллограмм" width="280" height="256">
+        <source width="560" height="512" type="image/png" media="(min-width: 1440px)" srcset="images/tiny-cat@1x.png 1x, images/tiny-cat@2x.png 2x">
+        <img class="example-cat__photo example-cat__photo--after" src="images/tiny-cat@1x.png" srcset="images/tiny-cat@2x.png 2x" alt="Борис после похудения вес - 8 киллограмм" width="280" height="256">
       </picture>
       <button class="example-cat__button-slider" type="button">
         <span class="visually-hidden">Посмотреть результат</span>
       </button>
     </section>
     <section class="invitation-to-coopeartion">
-      <div class="invitation-to-coopeartion cooperation">
+      <div class="cooperation">
         <h2 class="cooperation__title">Приглашаем к содруднечиству диллеров</h2>
         <p class="cooperation__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
     </section>
-    <footer class="body__footer footer">
+    <footer class="main__footer footer">
       <div class="footer__contacts contacts">
-        <h2 class="contacts__title">Cat Energy</h2>
+        <h2 class="visually-hidden">Cat Energy</h2>
+        <picture>
+          <source width="128" height="24" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text.svg">
+          <img class="header__title" src="images/logo-text.svg" alt="Cat Energy" width="101" height="18">
+        </picture>
         <ul class="contacts__social-list social-list">
           <li class="social-list__item social-list__item--vkontakte">
             <a class="social-list__link visually-hidden" href="#">Ссылка на страцу во Вконтакте</a>
