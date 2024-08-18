@@ -1,0 +1,24 @@
+.social-list__item {
+  background-color: #000000;
+}
+
+.social-list__item:hover,
+.social-list__item:focus-visible {
+  opacity: 0.7;
+}
+
+.social-list__item:active {
+  opacity: 0.3;
+}
+
+.social-list__item--youtube {
+  mask-image: url("../../icons/stack.svg#youtube-icon");
+}
+
+.social-list__item--vkontakte {
+  mask-image: url("../../icons/stack.svg#vk-icon");
+}
+
+.social-list__item--telegramm {
+  mask-image: url("../../icons/stack.svg#telegramm-icon");
+}

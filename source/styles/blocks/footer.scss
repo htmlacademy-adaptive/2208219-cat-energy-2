@@ -1,0 +1,17 @@
+.footer {
+  background-color: $secondary-bg;
+}
+
+.footer__html-academy-link {
+  mask-image: url("../../icons/stack.svg#html-academy");
+  background-color: #000000;
+}
+
+.footer__html-academy-link:hover,
+.footer__html-academy-link:focus-visible {
+  opacity: 0.7;
+}
+
+.footer__html-academy-link:active {
+  opacity: 0.2;
+}
