@@ -19,9 +19,9 @@
     <header class="main__hdeader header">
       <a class="logo" href="#">
         <picture>
-          <source width="70" height="59" type="image/png" media="(min-width: 1440px)" srcset="images/logo@1x.png 1x, images/logo@2x.png 2x">
-          <source width="60" height="50" type="image/png" media="(min-width: 768px)" srcset="images/logo-tablet@1x.png 1x, images/logo-tablet@2x.png 2x">
-          <img class="logo__icon" src="images/logo-mobile@1x.png" srcset="images/logo-mobile@2x.png 2x" alt="Иконка Cat Energy" width="38" height="33">
+          <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo.svg">
+          <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
+          <img class="logo__icon" src="images/logo-mobile.svg" alt="Иконка Cat Energy" width="38" height="33">
         </picture>
         <picture>
           <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text.svg">
@@ -30,6 +30,7 @@
       </a>
       <nav class="header__navigation navigation">
         <button class="navigation__toogle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <button class="navigation__toogle navigation__toogle--close" type="button"><span class="visually-hidden">Закрыть меню</span></button>
         <ul class="navigation__list">
           <li class="navigation__item">
             <a class="navigation__link" href="index.html">Главная</a>
