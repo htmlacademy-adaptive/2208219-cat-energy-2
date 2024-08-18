@@ -2,3 +2,24 @@
   font-size: 20px;
   line-height: 20px;
 }
+
+.navigation__toogle {
+  background-color: #000000;
+}
+
+.navigation__toogle:hover,
+.navigation__toogle:focus-visible {
+  opacity: 0.7;
+}
+
+.navigation__toogle:active {
+  opacity: 0.3;
+}
+
+.navigation__toogle--open {
+  mask-image: url("../../icons/stack.svg#open-menu");
+}
+
+.navigation__toogle--close {
+  mask-image: url("../../icons/stack.svg#close-menu");
+}
