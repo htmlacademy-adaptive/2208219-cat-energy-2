@@ -2,6 +2,36 @@
   background-color: $secondary-bg;
 }
 
+.programm-of-diet__logo-of-programm {
+  background-color: $third-bg;
+  background-size: 50px 50px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  position: relative;
+}
+
+.programm-of-diet__logo-cat {
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.programm-of-diet__logo-cat--cat-sit {
+  background-image: url("../../icons/stack.svg#cat-sit");
+  width: 50px;
+  height: 80px;
+  left: 10px;
+  top: -8px;
+}
+
+.programm-of-diet__logo-cat--cat-walk {
+  background-image: url("../../icons/stack.svg#cat-walk");
+  width: 80px;
+  height: 40px;
+  left: -12px;
+  top: 15px;
+}
+
 .programm-of-diet__title {
   font-size: 24px;
   line-height: 34px;
@@ -16,13 +46,18 @@
 .programm-of-diet__link {
   font-size: 16px;
   line-height: 16px;
-  background-image: url("../../icons/stack.svg#arrow-right");
+  position: relative;
 }
 
-.programm-of-diet__link:hover,
-.programm-of-diet__link:focus-visible {
-  opacity: 0.7;
+.programm-of-diet__link::after {
+  mask-image: url("../../icons/stack.svg#arrow-right");
+  background-color: $black-bg;
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 12px;
 }
+
 
 .programm-of-diet__link:active {
   opacity: 0.3;

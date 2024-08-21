@@ -1,3 +1,44 @@
+.cooperation {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media screen and (min-resolution: 192dpi) {
+  .cooperation {
+    background-image: url("../../images/map-mobile@2x.png");
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cooperation {
+    background-image: url("../../images/map-tablet@1x.png");
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .cooperation {
+    background-image: url("../../images/map-tablet@2x.png");
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .cooperation {
+    background-image: url("../../images/map-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
+  .cooperation {
+    background-image: url("../../images/map-desktop@2x.png");
+    background-repeat: no-repeat;
+  }
+}
+
 .cooperation__title {
   font-size: 16px;
   line-height: 20px;

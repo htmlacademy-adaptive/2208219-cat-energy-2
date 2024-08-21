@@ -17,3 +17,39 @@
   font-size: 14px;
   line-height: 20px;
 }
+
+.example-cat__slider {
+  position: relative;
+}
+
+.example-cat__button-slider {
+  padding: 0;
+  width: 4px;
+  height: 100%;
+  position: absolute;
+}
+
+.example-cat__button-slider::before {
+  content: "";
+  background-color: #ffffff;
+  border: 2px solid #666666;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: (-50% -50%);
+}
+
+.example-cat__button-slider::after {
+  content: "";
+  width: 24px;
+  height: 12px;
+  background-color: #666666;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: (-50% -50%);
+  mask-image: url("../../icons/stack.svg#arrows-left-right");
+}
