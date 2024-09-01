@@ -1,0 +1,11 @@
+.list-of-diets {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: $desktop-width) {
+  .list-of-diets {
+    flex-direction: row;
+  }
+}

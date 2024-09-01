@@ -6,12 +6,12 @@
 
 /* BLOCKS */
 @import "./blocks/header.scss";
+@import "./blocks/wrapper-of-header.scss";
 @import "./blocks/adventure.scss";
 @import "./blocks/adventures.scss";
 @import "./blocks/button.scss";
 @import "./blocks/catalog.scss";
 @import "./blocks/compound.scss";
-@import "./blocks/contacts.scss";
 @import "./blocks/cooperation.scss";
 @import "./blocks/example-cat.scss";
 @import "./blocks/footer.scss";
@@ -29,3 +29,6 @@
 @import "./blocks/sub-catalog.scss";
 @import "./blocks/sub-products.scss";
 @import "./blocks/subscribe.scss";
+@import "./blocks/title.scss";
+@import "./blocks/main.scss";
+@import "./blocks/list-of-diets.scss";

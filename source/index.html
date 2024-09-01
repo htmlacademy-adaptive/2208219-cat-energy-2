@@ -17,21 +17,23 @@
   <main class="main">
     <h1 class="visually-hidden">Сайт компании Cat Energy</h1>
     <header class="main__header header">
-      <a class="logo" href="#">
-        <picture>
-          <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo.svg">
-          <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
-          <img class="logo__icon" src="images/logo-mobile.svg" alt="Иконка Cat Energy" width="38" height="33">
-        </picture>
+      <div class="header__wrapper wrapper-of-header">
+        <a class="logo" href="#">
+          <picture>
+            <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo.svg">
+            <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
+            <img class="logo__icon" src="images/logo-mobile.svg" alt="Иконка Cat Energy" width="38" height="33">
+          </picture>
+        </a>
         <picture>
           <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text.svg">
           <img class="title" src="images/logo-text.svg" alt="Cat Energy" width="101" height="18">
         </picture>
-      </a>
-      <nav class="header__navigation navigation">
+        <button class="header__toogle header__toogle--open" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <button class="header__toogle header__toogle--close visually-hidden" type="button"><span class="visually-hidden">Закрыть меню</span></button>
 
-        <button class="navigation__toogle navigation__toogle--open" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <button class="navigation__toogle navigation__toogle--close" type="button"><span class="visually-hidden">Закрыть меню</span></button>
+      </div>
+      <nav class="header__navigation navigation">
         <ul class="navigation__list">
           <li class="navigation__item current">
             <a class="navigation__link" href="#">Главная</a>
@@ -56,8 +58,8 @@
       <a class="promo__link button" href="#">Подборать программу</a>
     </section>
     <section class="programm-of-diets">
-      <h2>Программы диет</h2>
-      <ul class="programm-of-diets__list">
+      <h2 class="visually-hidden">Программы диет</h2>
+      <ul class="programm-of-diets__list list-of-diets">
         <li class="programm-of-diets__item programm-of-diet">
           <div class="programm-of-diet__logo-of-programm">
             <div class="programm-of-diet__logo-cat programm-of-diet__logo-cat--cat-sit">
@@ -139,24 +141,19 @@
       </div>
     </section>
     <footer class="main__footer footer">
-      <div class="footer__contacts contacts">
-        <h2 class="visually-hidden">Социальные</h2>
-        <picture>
-          <source width="128" height="24" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text.svg">
-          <img class="title" src="images/logo-text.svg" alt="Cat Energy" width="101" height="18">
-        </picture>
-        <ul class="contacts__social-list social-list">
-          <li class="social-list__item social-list__item--vkontakte">
-            <a class="social-list__link visually-hidden" href="#">Ссылка на страцу во Вконтакте</a>
-          </li>
-          <li class="social-list__item social-list__item--youtube">
-            <a class="social-list__link visually-hidden" href="#">Ссылка на страцу в YouTube</a>
-          </li>
-          <li class="social-list__item social-list__item--telegramm">
-            <a class="social-list__link visually-hidden" href="#">Ссылка на страцу в Telegramm</a>
-          </li>
-        </ul>
-      </div>
+      <h2 class="visually-hidden">Социальные</h2>
+      <img class="title" src="images/logo-text.svg" alt="Cat Energy" width="101" height="18">
+      <ul class="footer__social-list social-list">
+        <li class="social-list__item social-list__item--vkontakte">
+          <a class="social-list__link visually-hidden" href="#">Ссылка на страцу во Вконтакте</a>
+        </li>
+        <li class="social-list__item social-list__item--youtube">
+          <a class="social-list__link visually-hidden" href="#">Ссылка на страцу в YouTube</a>
+        </li>
+        <li class="social-list__item social-list__item--telegramm">
+          <a class="social-list__link visually-hidden" href="#">Ссылка на страцу в Telegramm</a>
+        </li>
+      </ul>
       <a class="footer__html-academy-link html-academy-link" href="#">HTML Academy</a>
     </footer>
   </main>

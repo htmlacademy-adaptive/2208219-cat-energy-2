@@ -1,31 +1,47 @@
 .example-cat {
   background-color: $secondary-bg;
+  display: grid;
+  grid-template-areas:
+    "title"
+    "description"
+    "statistic"
+    "price"
+    "slider";
+  justify-items: center;
 }
 
 .example-cat__title {
   font-size: 36px;
   line-height: 40px;
+  grid-area: title;
 }
 
 .example-cat__description {
   font-family: $secondary-bg;
   font-size: 14px;
   line-height: 18px;
+  grid-area: description;
+}
+
+.example-cat__statistic {
+  grid-area: statistic;
 }
 
 .example-cat__price {
   font-size: 14px;
   line-height: 20px;
+  grid-area: price;
 }
 
 .example-cat__slider {
   position: relative;
+  grid-area: slider;
 }
 
 .example-cat__button-slider {
   padding: 0;
   width: 4px;
-  height: 100%;
+  height: 50%;
   position: absolute;
 }
 
@@ -52,4 +68,24 @@
   left: 50%;
   translate: (-50% -50%);
   mask-image: url("../../icons/stack.svg#arrows-left-right");
+}
+
+@media (min-width: $tablet-width) {
+  .example-cat {
+    grid-template-areas:
+      "title       title       title"
+      "description description description"
+      "statistic   statistic   price"
+      "slider      slider      slider";
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example-cat {
+    grid-template-areas:
+      "title       slider"
+      "description slider"
+      "statistic   slider"
+      "price       slider";
+  }
 }

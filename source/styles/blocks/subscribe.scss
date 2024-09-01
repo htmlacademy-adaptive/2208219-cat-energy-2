@@ -1,3 +1,12 @@
+.subscribe__form {
+  display: grid;
+  grid-template-areas:
+    "label"
+    "input"
+    "button";
+  gap: 10px;
+}
+
 .subscribe__title {
   font-size: 24px;
   line-height: 24px;
@@ -6,9 +15,23 @@
 .subscribe__label {
   font-size: 16px;
   line-height: 24px;
+  grid-area: label;
 }
 
 .subscribe__input {
   font-size: 20px;
   line-height: 30px;
+  grid-area: input;
+}
+
+.subscribe__button {
+  grid-area: button;
+}
+
+@media (min-width: $tablet-width) {
+  .subscribe__form {
+    grid-template-areas:
+      "label label"
+      "input button";
+  }
 }

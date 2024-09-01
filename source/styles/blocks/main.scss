@@ -1,0 +1,16 @@
+
+.main__header {
+  width: calc(100% - 20px);
+}
+
+@media (min-width: $tablet-width) {
+  .main__header {
+    width: calc(100% - 30px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main__header {
+    width: calc(100% - 110px);
+  }
+}

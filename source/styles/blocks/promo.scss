@@ -1,9 +1,47 @@
 .promo {
   font-size: 36px;
   line-height: 36px;
+  display: grid;
+  justify-items: center;
 }
 
 .promo__slogan {
   font-size: 14px;
   line-height: 14px;
+}
+
+@media (min-width: $tablet-width) {
+  .promo {
+    grid-template-areas:
+      "title"
+      "slogan"
+      "button"
+      "image";
+  }
+
+  .promo__title {
+    grid-area: title;
+  }
+
+  .promo__slogan {
+    grid-area: slogan;
+  }
+
+  .promo__link {
+    grid-area: button;
+  }
+
+  .promo picture {
+    grid-area: image;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .promo {
+    grid-template-areas:
+      "title  image"
+      "slogan image"
+      "button image";
+  }
 }

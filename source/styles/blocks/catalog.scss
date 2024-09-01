@@ -1,4 +1,6 @@
 .catalog__title {
   font-size: 36px;
   line-height: 36px;
+  display: flex;
+  flex-direction: column;
 }

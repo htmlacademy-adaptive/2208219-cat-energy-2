@@ -1,1 +1,44 @@
+.header {
+  display: grid;
+  justify-items: center;
+}
 
+.header__wrapper {
+  width: 100%;
+}
+
+.header__toogle {
+  background-color: #000000;
+  justify-self: end;
+}
+
+.header__toogle:hover,
+.header__toogle:focus-visible {
+  opacity: 0.7;
+}
+
+.header__toogle:active {
+  opacity: 0.3;
+}
+
+.header__toogle--open {
+  width: 24px;
+  height: 24px;
+  mask-image: url("../../icons/stack.svg#open-menu");
+}
+
+.header__toogle--close {
+  width: 18px;
+  height: 18px;
+  mask-image: url("../../icons/stack.svg#close-menu");
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .header__toogle {
+    display: none;
+  }
+}
