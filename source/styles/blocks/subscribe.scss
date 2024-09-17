@@ -1,3 +1,88 @@
+.subscribe {
+  padding: 0 $mobile-padding 50px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .subscribe {
+    padding: 0 $tablet-padding 80px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .subscribe {
+    padding: 0 $desktop-padding 105px;
+  }
+}
+
+.subscribe__title {
+  @include null;
+  padding: 40px 0 0;
+  font-size: 24px;
+  line-height: 24px;
+  position: relative;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .subscribe__title {
+    font-size: 32px;
+    line-height: 32px;
+    padding: 80px 40px 0;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .subscribe__title {
+    font-size: 40px;
+    line-height: 40px;
+    padding: 100px 0 0;
+  }
+}
+
+.subscribe__title::after {
+  content: "";
+  border-top: 2px solid $green-border;
+  width: 108px;
+  height: 1px;
+  position: absolute;
+  top: 50px;
+  right: -20px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .subscribe__title::after {
+    width: 456px;
+    top: 93px;
+    right: -30px;
+  }
+
+  .subscribe__title::before {
+    content: "";
+    border-top: 2px solid $green-border;
+    width: 30px;
+    height: 1px;
+    position: absolute;
+    top: 93px;
+    left: -30px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .subscribe__title::after {
+    width: 1037px;
+    top: 117px;
+    right: -110px;
+  }
+
+  .subscribe__title::before {
+    content: "";
+    width: 70px;
+    top: 117px;
+    left: -110px;
+  }
+}
+
 .subscribe__form {
   display: grid;
   grid-template-areas:
@@ -7,31 +92,84 @@
   gap: 10px;
 }
 
-.subscribe__title {
-  font-size: 24px;
-  line-height: 24px;
+@media screen and (min-width: $tablet-width) {
+  .subscribe__form {
+    grid-template-areas:
+      "label label"
+      "input button";
+    gap: 0;
+    padding: 0 40px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .subscribe__form {
+    padding: 0 235px;
+  }
 }
 
 .subscribe__label {
   font-size: 16px;
   line-height: 24px;
   grid-area: label;
+  text-align: center;
+  padding: 30px 0 15px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .subscribe__label {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 66px 40px 24px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .subscribe__label {
+    padding: 71px 40px 24px;
+  }
 }
 
 .subscribe__input {
   font-size: 20px;
   line-height: 30px;
   grid-area: input;
+  padding: 10px;
+  text-transform: uppercase;
+  font-family: $primary-font;
+  margin-bottom: 8px;
+
+  &:focus {
+    outline: none;
+    border: 2px solid $black-border;
+    border-radius: 4px;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    outline: none;
+    border: 2px solid $red-border;
+    border-radius: 4px;
+  }
+}
+
+@media screen and (min-width: $tablet-width) {
+  .subscribe__input {
+    margin: 0;
+    padding: 10px 40px 10px 10px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .subscribe__input {
+    margin: 0;
+    padding: 10px 165px 10px 10px;
+  }
 }
 
 .subscribe__button {
+  font-family: $primary-font;
   grid-area: button;
-}
-
-@media (min-width: $tablet-width) {
-  .subscribe__form {
-    grid-template-areas:
-      "label label"
-      "input button";
-  }
+  height: auto;
+  width: auto;
+  padding: 15px 0;
 }

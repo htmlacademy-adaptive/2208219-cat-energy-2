@@ -3,30 +3,88 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 30px;
-  height: 150px;
+  padding: 40px 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.footer__html-academy-link {
-  position: relative;
-}
-
-.footer__html-academy-link::after {
-  position: absolute;
-  content: "";
-  mask-image: url("../../icons/stack.svg#html-academy");
-  background-color: #000000;
-  width: 27px;
-  height: 24px;
-}
-
-.footer__html-academy-link:active {
-  opacity: 0.2;
-}
-
-@media (min-width: $tablet-width) {
+@media screen and (min-width: $tablet-width) {
   .footer {
     flex-direction: row;
+    justify-content: space-between;
+    padding: 30px $tablet-padding;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .footer {
+    padding: 50px $desktop-padding;
+  }
+}
+
+.footer__title {
+  padding: 0 0 20px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media screen and (min-width: $tablet-width) {
+  .footer__title {
+    padding: 0 45px 10px 0;
+  }
+}
+
+@media screen and (min-width: $tablet-width) {
+  .footer__title {
+    padding: 20px 45px 0 0;
+  }
+}
+
+.footer__social-list {
+  padding: 25px 0 0;
+  margin: 0;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .footer__social-list {
+    padding: 20px 0 0;
+  }
+}
+
+.footer__html-academy {
+  padding: 20px 10px;
+  position: relative;
+  color: $main-color;
+  cursor: pointer;
+
+  &:hover {
+    color: $green-text;
+  }
+
+  &:hover .html-academy__icon {
+    background-color: $third-bg;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media screen and (min-width: $tablet-width) {
+  .footer__html-academy {
+    padding: 0 0 5px 20px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .footer__html-academy {
+    padding: 20px 0 0 20px;
   }
 }

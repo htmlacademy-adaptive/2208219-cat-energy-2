@@ -1,6 +1,33 @@
+.catalog {
+  padding: 65px $mobile-padding 0;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .catalog {
+    padding: 10px $tablet-padding 0;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .catalog {
+    padding: 160px $desktop-padding 0;
+  }
+}
+
 .catalog__title {
+  @include null;
+  padding: 30px 0 40px;
   font-size: 36px;
   line-height: 36px;
-  display: flex;
-  flex-direction: column;
+  border-bottom: 1px solid $gray-border;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .catalog__title {
+    padding: 30px 0 25px;
+    border-bottom: none;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }

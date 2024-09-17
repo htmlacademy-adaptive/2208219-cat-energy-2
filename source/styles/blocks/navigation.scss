@@ -1,17 +1,119 @@
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+
 .navigation__list {
+  padding: 0;
+  margin: 0;
   font-size: 20px;
   line-height: 20px;
   display: flex;
   flex-direction: column;
   list-style: none;
+  align-items: center;
+  width: inherit;
+  z-index: 4;
+  background-color: $primary-bg;
 }
 
-@media (min-width: $tablet-width) {
-  .navigation {
-    justify-self: end;
+@media screen and (min-width: $tablet-width) {
+  .navigation__list {
+    flex-flow: row wrap;
+    justify-content: end;
+    gap: 35px;
+    padding-right: 5px;
+    background-color: transparent;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .navigation__list {
+    padding-right: 24px;
+    padding-top: 4px;
+    gap: 34px;
+  }
+}
+
+.navigation__item {
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid $gray-border;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .navigation__item {
+    width: max-content;
+  }
+}
+
+@media screen and (min-width: $tablet-width) {
+  .navigation__item,
+  .navigation__item:last-of-type {
+    border: none;
+    position: relative;
   }
 
-  .navigation__list {
-    flex-direction: row;
+  .current::after {
+    position: absolute;
+    content: "";
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-bottom: 2px solid $green-border;
+  }
+}
+
+
+.navigation__link {
+  text-decoration: none;
+  color: $main-color;
+  display: block;
+  padding: 22px 50px;
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media screen and (min-width: $tablet-width) {
+  .navigation__link {
+    padding: 32px 0;
+    padding-bottom: 9px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .navigation__link {
+    padding: 32px 0;
+    padding-bottom: 9px;
+    font-size: 20px;
+    color: $white-text;
+  }
+
+  .navigation__link--catalog {
+    color: $main-color;
+  }
+
+  .current::after {
+    border-bottom: 2px solid $white-border;
+  }
+
+  .current--catalog::after {
+    border-bottom: 2px solid $green-border;
   }
 }

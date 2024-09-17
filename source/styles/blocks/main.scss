@@ -1,16 +1,39 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .main__header {
-  width: calc(100% - 20px);
+  background-color: $primary-bg;
+  padding: 10px 20px 10px 15px;
+  box-sizing: border-box;
+  border-bottom: 1px solid $gray-border;
 }
 
-@media (min-width: $tablet-width) {
+@media screen and (min-width: $tablet-width) {
   .main__header {
-    width: calc(100% - 30px);
+    padding: 9px $tablet-padding 20px;
+    border-bottom: none;
   }
 }
 
-@media (min-width: $desktop-width) {
+@media screen and (min-width: $desktop-width) {
   .main__header {
-    width: calc(100% - 110px);
+    padding: 39px  85px 39px $desktop-padding;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    background-color: transparent;
+    justify-content: space-between;
+    gap: 30px;
   }
+}
+
+.absolute {
+  position: absolute;
+  width: 100%;
+  z-index: 4;
 }

@@ -1,11 +1,25 @@
 .programm-of-diet {
-  background-color: $secondary-bg;
+  background-color: $gray-bg;
   list-style: none;
-  display: grid;
-  grid-template-areas:
-    "image       title"
-    "description description"
-    "button      button";
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: 20px 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: $tablet-width) {
+  .programm-of-diet {
+    padding: 35px 300px 30px 50px;
+    background-position: 90% 50%;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .programm-of-diet {
+    padding: 35px 60px 30px 50px;
+    background-position: 10% 20%;
+  }
 }
 
 .programm-of-diets__list {
@@ -13,55 +27,119 @@
   padding: 0;
 }
 
-.programm-of-diet__logo-of-programm {
-  background-color: $third-bg;
+.programm-of-diet--cat-sit {
+  background-image: url("../../icons/cat-sit.svg");
   background-size: 50px 50px;
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  position: relative;
-  grid-area: image;
 }
 
-.programm-of-diet__logo-cat {
-  position: absolute;
-  background-repeat: no-repeat;
+@media screen and (min-width: $tablet-width) {
+  .programm-of-diet--cat-sit {
+    background-size: 200px 211px;
+  }
 }
 
-.programm-of-diet__logo-cat--cat-sit {
-  background-image: url("../../icons/stack.svg#cat-sit");
-  width: 50px;
-  height: 80px;
-  left: 10px;
-  top: -8px;
+@media screen and (min-width: $desktop-width) {
+  .programm-of-diet--cat-sit {
+    background-size: 100px 106px;
+  }
 }
 
-.programm-of-diet__logo-cat--cat-walk {
-  background-image: url("../../icons/stack.svg#cat-walk");
-  width: 80px;
-  height: 40px;
-  left: -12px;
-  top: 15px;
+.programm-of-diet--cat-walk {
+  background-image: url("../../icons/cat-walk.svg");
+  background-size: 60px 60px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .programm-of-diet--cat-walk {
+    background-size: 268px 200px;
+    background-position: 93% 50%;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .programm-of-diet--cat-walk {
+    background-size: 134px 100px;
+    background-position: 10% 20%;
+  }
 }
 
 .programm-of-diet__title {
+  @include null;
   font-size: 24px;
   line-height: 34px;
-  grid-area: title;
+  text-transform: uppercase;
+  padding: 30px 0 30px 100px;
+  align-self: start;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .programm-of-diet__title {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 40px 0 20px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .programm-of-diet__title {
+    font-size: 36px;
+    line-height: 36px;
+    align-self: center;
+    padding: 55px 0 60px 40px;
+  }
 }
 
 .programm-of-diet__description {
+  @include null;
   font-family: $regular-font;
   font-size: 14px;
   line-height: 18px;
-  grid-area: description;
+  padding: 2px 20px 22px;
+  position: relative;
+}
+
+.programm-of-diet__description::after {
+  position: absolute;
+  content: "";
+  width: 80%;
+  bottom: 0;
+  left: 10%;
+  border-bottom: 1px solid $gray-border;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .programm-of-diet__description {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 2px 20px 22px 2px;
+  }
+
+  .programm-of-diet__description::after {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .programm-of-diet__description {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px 0 20px;
+  }
 }
 
 .programm-of-diet__link {
   font-size: 16px;
   line-height: 16px;
   position: relative;
-  grid-area: button;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $main-color;
+  padding: 20px 50px 20px 20px;
+  align-self: start;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .programm-of-diet__link::after {
@@ -71,27 +149,33 @@
   content: "";
   width: 24px;
   height: 12px;
+  top: 40%;
+  left: 120px;
+  padding-top: 1px;
 }
 
+@media screen and (min-width: $tablet-width) {
+  .programm-of-diet__link {
+    font-size: 20px;
+    line-height: auto;
+    padding: 35px 50px 40px 0;
+  }
 
-.programm-of-diet__link:active {
-  opacity: 0.3;
-}
-
-@media (min-width: $tablet-width) {
-  .programm-of-diet {
-    grid-template-areas:
-      "title       image"
-      "description image"
-      "button      image";
+  .programm-of-diet__link::after {
+    padding-right: 20px;
+    top: 40%;
+    left: 80%;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .programm-of-diet {
-    grid-template-areas:
-      "image       title"
-      "description description"
-      "button      button";
+@media screen and (min-width: $desktop-width) {
+  .programm-of-diet__link::after {
+    padding: 0 30px;
+    top: 25%;
+    left: 65%;
+  }
+
+  .programm-of-diet__link {
+    padding: 15px 50px 35px 1px;
   }
 }

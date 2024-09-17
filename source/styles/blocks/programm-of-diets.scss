@@ -1,0 +1,20 @@
+.programm-of-diets {
+  padding: 20px 20px 0;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .programm-of-diets {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .programm-of-diets {
+    padding: 70px 110px 20px;
+  }
+
+  .programm-of-diets__item {
+    width: 570px;
+    box-sizing: border-box;
+  }
+}

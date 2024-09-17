@@ -1,8 +1,7 @@
 .social-list {
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: row;
+  gap: 25px;
 }
 
 .social-list__item {
@@ -11,9 +10,8 @@
   height: 22px;
 }
 
-.social-list__item:hover,
-.social-list__item:focus-visible {
-  opacity: 0.7;
+.social-list__item:hover {
+  background-color: $third-bg;
 }
 
 .social-list__item:active {
@@ -30,4 +28,10 @@
 
 .social-list__item--telegramm {
   mask-image: url("../../icons/stack.svg#telegramm-icon");
+}
+
+.social-list__link {
+  padding: 15px;
+  clip: auto;
+  clip-path: unset;
 }

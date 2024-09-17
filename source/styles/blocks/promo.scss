@@ -1,47 +1,142 @@
 .promo {
   font-size: 36px;
   line-height: 36px;
+  color: $white-text;
+  background-image:
+    linear-gradient(to bottom,
+    rgba(104, 183, 56, 0.85) 63%,
+    transparent 63%),
+    url("../../images/index-background-mobile@2x.jpg");
+  background-size: cover, 100% 63%;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+
+  &.no-js {
+    margin-top: 65px;
+  }
+
+  &__title {
+    line-height: 36px;
+    font-size: 36px;
+    text-align: center;
+    min-height: 72px;
+    z-index: 3;
+
+    @include null;
+    padding-top: 27px;
+  }
+
+  &__slogan {
+    @include null;
+    z-index: 3;
+    line-height: 14px;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-top: 25px;
+    padding-bottom: 30px;
+  }
+}
+
+.promo__wrap {
   display: grid;
   justify-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 $mobile-padding;
 }
 
-.promo__slogan {
-  font-size: 14px;
-  line-height: 14px;
-}
-
-@media (min-width: $tablet-width) {
+@media screen and (min-width: $tablet-width) {
   .promo {
+
+    background-image: unset;
+
+    &__title {
+      grid-area: title;
+      font-size: 60px;
+      line-height: 60px;
+      text-align: left;
+      padding-top: 40px;
+      padding-left: 90px;
+    }
+
+    &__slogan {
+      grid-area: slogan;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: left;
+      padding: 40px 0;
+      padding-left: 90px;
+    }
+
+    &__link {
+      grid-area: button;
+      margin-top: 10px;
+      margin-left: 90px;
+    }
+
+    &__image {
+      margin-top: -80px;
+    }
+  }
+
+  .promo__wrap {
     grid-template-areas:
       "title"
       "slogan"
       "button"
       "image";
-  }
-
-  .promo__title {
-    grid-area: title;
-  }
-
-  .promo__slogan {
-    grid-area: slogan;
-  }
-
-  .promo__link {
-    grid-area: button;
-  }
-
-  .promo picture {
-    grid-area: image;
+    color: $main-color;
+    justify-items: start;
   }
 }
 
 
-@media (min-width: $desktop-width) {
+@media screen and (min-width: $desktop-width) {
   .promo {
-    grid-template-areas:
+
+    background-image:
+      linear-gradient(to right,
+      transparent 50%,
+      rgba(104, 183, 56, 0.85)
+      50%),
+      url("../../images/index-background-desktop@2x.jpg");
+    background-size: cover, 50% 100%;
+    background-repeat: no-repeat;
+    background-position: center right;
+
+
+    &__title {
+      padding-top: 0;
+      padding-left: 0;
+      font-size: 60px;
+      line-height: 60px;
+      place-self: center start;
+    }
+
+    &__slogan {
+      padding: 0;
+      place-self: center start;
+    }
+
+    &__link {
+      place-self: center start;
+      margin: 0;
+    }
+
+    &__image {
+      align-self: start;
+    }
+  }
+
+
+  .promo__wrap {
+    grid-template:
       "title  image"
       "slogan image"
-      "button image";
+      "button image" / 40% 60%;
+    grid-template-rows: 150px 90px 100px;
+    justify-content: start;
+    padding: 205px $desktop-padding 150px 190px;
   }
 }

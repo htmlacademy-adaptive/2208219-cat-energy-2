@@ -1,5 +1,30 @@
-.html-academy-link {
+.html-academy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 140px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .html-academy {
+    width: auto;
+    gap: 20px;
+    padding: 23px 0 0;
+  }
+}
+
+.html-academy__link {
   font-family: $regular-font;
   font-size: 16px;
   line-height: 20px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.html-academy__icon {
+  mask-image: url("../../icons/stack.svg#html-academy");
+  background-color: $black-bg;
+  width: 27px;
+  height: 34px;
 }

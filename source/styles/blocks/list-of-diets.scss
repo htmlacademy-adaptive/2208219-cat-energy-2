@@ -1,11 +1,19 @@
 .list-of-diets {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  row-gap: 20px;
 }
 
-@media (min-width: $desktop-width) {
+@media screen and (min-width: $tablet-width) {
   .list-of-diets {
+    row-gap: 30px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .list-of-diets {
+    justify-content: center;
     flex-direction: row;
+    gap: 75px;
   }
 }
