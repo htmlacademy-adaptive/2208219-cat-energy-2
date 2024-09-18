@@ -1,0 +1,14 @@
+@mixin font-face($font-famaly, $font-weight, $font-style, $font-src) {
+  @font-face {
+    font-family: $font-famaly;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: swap;
+    src: $font-src;
+  }
+}
+
+@mixin null {
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,12 @@
+.wrapper-of-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  place-items: center;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .wrapper-of-header {
+    grid-template-columns: 1fr 1fr;
+    justify-self: start;
+  }
+}

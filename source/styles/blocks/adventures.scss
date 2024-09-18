@@ -1,0 +1,78 @@
+.adventures {
+  padding-top: 20px;
+  padding-bottom: 49px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .adventures {
+    padding-top: 42px;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .adventures {
+    padding-top: 0;
+  }
+}
+
+.adventures__wrapper {
+  box-sizing: border-box;
+  padding: 0 $mobile-padding;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .adventures__wrapper {
+    padding: 0 $tablet-padding 20px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .adventures__wrapper {
+    padding: 50px $desktop-padding 0;
+  }
+}
+
+.adventures__title {
+  @include null;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .adventures__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.adventures__list {
+  font-size: 14px;
+  line-height: 28px;
+  margin: 40px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: strech;
+  row-gap: 20px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .adventures__list {
+    grid-template-columns: 1fr 1fr;
+    gap: 145px 60px;
+    padding: 70px 0 0;
+    margin: 0;
+    justify-items: start;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .adventures__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    margin: 0;
+    padding: 0;
+    gap: 10px 75px;
+  }
+}

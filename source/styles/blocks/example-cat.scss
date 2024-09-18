@@ -1,0 +1,235 @@
+.example-cat {
+  background-color: $secondary-bg;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .example-cat {
+    background: linear-gradient(to bottom, $primary-bg 62.5%, $secondary-bg 37.5%);
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .example-cat {
+    background: linear-gradient(to bottom, $primary-bg 28%, $gray-bg 28%);
+  }
+}
+
+.example-cat__wrapper {
+  padding: 25px $mobile-padding 40px;
+  display: grid;
+  grid-template-areas:
+    "title"
+    "description"
+    "statistic"
+    "price"
+    "slider";
+  justify-items: center;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .example-cat__wrapper {
+    padding: 40px $tablet-padding 110px;
+    grid-template:
+      "title title title" 120px
+      "description description description"
+      "statistic statistic price"
+      "slider slider slider" / 30% 30% 40%;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .example-cat__wrapper {
+    padding: 60px $desktop-padding 70px;
+    grid-template:
+      "title       slider" 220px
+      "description slider" 155px
+      "statistic   slider" 100px
+      "price       slider" 68px / 50% 50%;
+  }
+}
+
+.example-cat__title {
+  @include null;
+  font-size: 36px;
+  line-height: 40px;
+  grid-area: title;
+  justify-self: start;
+  padding-bottom: 26px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .example-cat__title {
+    font-size: 60px;
+    line-height: 60px;
+    padding: 0 0 21px;
+    align-self: end;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .example-cat__title {
+    align-self: start;
+    padding: 15px 0 0;
+  }
+}
+
+.example-cat__description {
+  @include null;
+  padding: 15px 0 18px;
+  font-family: $regular-font;
+  font-size: 14px;
+  line-height: 18px;
+  grid-area: description;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .example-cat__description {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 39px 0;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .example-cat__description {
+    padding: 0 177px 0 0;
+  }
+}
+
+.example-cat__statistic {
+  grid-area: statistic;
+  width: 100%;
+}
+
+.example-cat__price {
+  @include null;
+  display: flex;
+  gap: 5px;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  grid-area: price;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .example-cat__price {
+    flex-direction: column;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 178px;
+    text-align: right;
+    padding: 20px 0 0 1px;
+    place-self: center end;
+    gap: 0;
+
+    & p {
+      @include null;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .example-cat__price {
+    flex-direction: row;
+    place-self: end start;
+    max-width: 328px;
+    gap: 64px;
+  }
+}
+
+.example-cat__slider {
+  position: relative;
+  width: 280px;
+  height: 256px;
+  grid-area: slider;
+  margin-top: 5px;
+  padding-bottom: 6px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .example-cat__slider {
+    margin-top: 96px;
+    width: 560px;
+    height: 512px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .example-cat__slider {
+    margin-top: 16px;
+  }
+}
+
+.example-cat__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.example-cat__slide--one {
+  clip-path: inset(0 50% 0 0);
+  z-index: 1;
+}
+
+.example-cat__slide--two {
+  clip-path: inset(0 0 0 50%);
+}
+
+.example-cat__button-slider {
+  padding: 0;
+  width: 4px;
+  height: 256px;
+  background-color: $brown-bg;
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $third-bg;
+
+    &::before {
+      border: 2px solid $green-border;
+    }
+
+    &::after {
+      background-color: $third-bg;
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@media screen and (min-width: $tablet-width) {
+  .example-cat__button-slider {
+    height: 512px;
+  }
+}
+
+.example-cat__button-slider::before {
+  content: "";
+  background-color: #ffffff;
+  border: 2px solid #666666;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: (-50% -50%);
+}
+
+.example-cat__button-slider::after {
+  content: "";
+  width: 24px;
+  height: 18px;
+  background-color: $brown-bg;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: (-50% -50%);
+  mask-image: url("../../icons/stack.svg#arrows-left-right");
+}

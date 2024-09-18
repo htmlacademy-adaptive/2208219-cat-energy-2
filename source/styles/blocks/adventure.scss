@@ -1,0 +1,92 @@
+.adventure {
+  display: grid;
+  grid-template-columns: 22% 78%;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .adventure {
+    grid-template-rows: 50% 50%;
+    grid-template-columns: auto;
+    position: relative;
+  }
+
+  .adventure::before {
+    content: "";
+    position: absolute;
+    top: 126px;
+    left: 110px;
+    font-size: 280px;
+    color: $gray-text;
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .adventure {
+    align-items: end;
+    padding: 50px 0 0;
+    row-gap: 27px;
+  }
+}
+
+.adventure__icon {
+  width: 60px;
+  height: 60px;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $third-bg;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .adventure__icon {
+    width: 80px;
+    height: 80px;
+    place-self: end start;
+  }
+}
+
+@media screen and (min-width: $tablet-width) {
+  .adventure__icon {
+    place-self: unset;
+  }
+}
+
+.adventure__icon--leaf {
+  background-image: url("../../icons/stack.svg#leaf");
+}
+
+.adventure__icon--clock {
+  background-image: url("../../icons/stack.svg#alarm");
+}
+
+.adventure__icon--cutlery {
+  background-image: url("../../icons/stack.svg#eat");
+}
+
+.adventure__icon--glass {
+  background-image: url("../../icons/stack.svg#glass");
+}
+
+.adventure__description {
+  @include null;
+  font-family: $regular-font;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 2px 0 0 21px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .adventure__description {
+    padding: 25px 70px 0 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .adventure__description {
+    padding: 0 0 30px;
+  }
+}

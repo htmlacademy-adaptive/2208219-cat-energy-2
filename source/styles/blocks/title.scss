@@ -1,0 +1,10 @@
+.title {
+  color: #000000;
+  padding: 15px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .title {
+    padding: 10px 13px;
+  }
+}

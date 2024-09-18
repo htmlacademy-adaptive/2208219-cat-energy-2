@@ -1,0 +1,50 @@
+.statistic-data {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.statistic-data__title {
+  @include null;
+  font-family: $regular-font;
+  font-size: 12px;
+  line-height: 12px;
+  position: absolute;
+  text-transform: lowercase;
+  width: 81px;
+  text-align: center;
+  bottom: -15px;
+  background-color: $secondary-bg;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .statistic-data__title {
+    font-size: 14px;
+    line-height: 14px;
+    width: 142px;
+    bottom: -3px;
+    background-color: $primary-bg;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .statistic-data__title {
+    background-color: $secondary-bg;
+  }
+}
+
+.statistic-data__description {
+  @include null;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .statistic-data__description {
+    font-size: 30px;
+    line-height: 37px;
+    padding-bottom: 10px;
+  }
+}

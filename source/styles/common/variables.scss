@@ -1,1 +1,43 @@
 /* здесь используйте глобальные переменные */
+// шрфиты
+$primary-font: "Oswald", sans-serif;
+$regular-font: "Lato", sans-serif;
+
+// фоновые цвета
+$primary-bg: #ffffff;
+$secondary-bg: #eaeaea;
+$gray-bg: #f2f2f2;
+$gray-black-bg: #ebebeb;
+$third-bg:#68b738;
+$third-black-bg: #5eaa2f;
+$black-bg:#000000;
+$brown-bg: #666666;
+
+// размеры
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+// цвета текста
+$main-color: #000000;
+$white-text: #ffffff;
+$gray-text: #f2f2f2;
+$green-text: #68b738;
+
+//цвета границ
+$black-border: #000000;
+$gray-border:#e6e6e6;
+$light-gray-border:#f2f2f2;
+$statistic-border: #cdcdcd;
+$green-border: #68b738;
+$white-border: #ffffff;
+$gray-border: #d9d9d9;
+$red-border: #ff8282;
+
+//уши страницы
+$mobile-padding: 20px;
+$negative-mobile-padding: -$mobile-padding;
+$tablet-padding: 30px;
+$negative-tablet-padding: -$tablet-padding;
+$desktop-padding: 110px;
+$negative-desktop-padding: -$desktop-padding;

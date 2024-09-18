@@ -1,0 +1,39 @@
+.statistic {
+  @include null;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding-bottom: 20px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .statistic {
+    justify-content: flex-start;
+    padding: 17px 0 0;
+    gap: 43px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .statistic {
+    padding: 0;
+    gap: 43px;
+  }
+}
+
+.statistic__item {
+  min-width: 124px;
+  min-height: 56px;
+  box-shadow:
+    0.5 0.5 0 1px $statistic-border,
+    -0.5 -0.5 0 1px $statistic-border;
+  border-radius: 3px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .statistic__item {
+    min-width: 162px;
+    min-height: 70px;
+    place-self: center;
+  }
+}

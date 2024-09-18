@@ -1,5 +1,57 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  display: grid;
+  place-items: start center;
+  z-index: 2;
+
+  &__wrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: $tablet-width) {
+  .header {
+    grid-template-columns: 1fr 3fr;
+
+    &__toogle {
+      display: none;
+    }
+
+    &__navigation {
+      justify-self: end;
+    }
+
+    &__wrapper {
+      padding-top: 16px;
+    }
+  }
+}
+
+.header__toogle {
+  @include null;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: #000000;
+  justify-self: end;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.header__toogle:hover,
+.header__toogle:focus-visible {
+  opacity: 0.7;
+}
+
+.header__toogle:active {
+  opacity: 0.3;
+}
+
+.header__toogle--open {
+  mask-image: url("../../icons/stack.svg#open-menu");
+}
+
+.header__toogle--close {
+  mask-image: url("../../icons/stack.svg#close-menu");
 }
