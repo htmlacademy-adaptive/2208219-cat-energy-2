@@ -1,11 +1,11 @@
 .social-list {
   display: flex;
   flex-direction: row;
-  gap: 25px;
+  gap: 22px;
 }
 
 .social-list__item {
-  background-color: #000000;
+  background-color: $brown-bg;
   width: 28px;
   height: 22px;
 }

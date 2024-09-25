@@ -30,15 +30,6 @@
   }
 }
 
-.adventure__icon {
-  width: 60px;
-  height: 60px;
-  background-size: 30px 30px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: $third-bg;
-}
-
 @media screen and (min-width: $tablet-width) {
   .adventure__icon {
     width: 80px;
@@ -53,22 +44,6 @@
   }
 }
 
-.adventure__icon--leaf {
-  background-image: url("../../icons/stack.svg#leaf");
-}
-
-.adventure__icon--clock {
-  background-image: url("../../icons/stack.svg#alarm");
-}
-
-.adventure__icon--cutlery {
-  background-image: url("../../icons/stack.svg#eat");
-}
-
-.adventure__icon--glass {
-  background-image: url("../../icons/stack.svg#glass");
-}
-
 .adventure__description {
   @include null;
   font-family: $regular-font;
@@ -79,7 +54,7 @@
 
 @media screen and (min-width: $tablet-width) {
   .adventure__description {
-    padding: 25px 70px 0 0;
+    padding: 25px 50px 0 0;
     font-size: 16px;
     line-height: 24px;
   }
@@ -87,6 +62,6 @@
 
 @media screen and (min-width: $desktop-width) {
   .adventure__description {
-    padding: 0 0 30px;
+    padding: 26px 0 30px;
   }
 }

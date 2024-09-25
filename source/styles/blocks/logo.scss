@@ -1,7 +1,9 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 40px;
+  padding-left: 15px;
+  gap: 37px;
+  justify-content: space-around;
 
   &:hover {
     opacity: 0.8;
@@ -15,5 +17,6 @@
 @media screen and (min-width: $tablet-width) {
   .logo {
     gap: 0;
+    padding-left: 0;
   }
 }

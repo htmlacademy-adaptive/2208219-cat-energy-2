@@ -2,6 +2,11 @@
   display: grid;
   place-items: start center;
   z-index: 2;
+  background-color: $primary-bg;
+  padding: 8px 0 3px;
+  box-sizing: border-box;
+  border-bottom: 1px solid $gray-border;
+  width: 100%;
 
   &__wrapper {
     width: 100%;
@@ -11,6 +16,8 @@
 @media screen and (min-width: $tablet-width) {
   .header {
     grid-template-columns: 1fr 3fr;
+    padding: 9px $tablet-padding 20px;
+    border-bottom: none;
 
     &__toogle {
       display: none;
@@ -26,13 +33,37 @@
   }
 }
 
+@media screen and (min-width: $tablet-width) {
+  .header {
+    grid-template-columns: 1fr 3fr;
+    padding: 9px $tablet-padding 20px;
+    border-bottom: none;
+  }
+}
+
+
+@media screen and (min-width: $desktop-width) {
+  .header {
+    padding: 39px  85px 39px $desktop-padding;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    background-color: transparent;
+    justify-content: space-between;
+    gap: 30px;
+  }
+}
+
 .header__toogle {
   @include null;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   border: none;
   background-color: #000000;
   justify-self: end;
+  margin: 0 20px 6px 0;
 
   &.hidden {
     display: none;
@@ -50,8 +81,15 @@
 
 .header__toogle--open {
   mask-image: url("../../icons/stack.svg#open-menu");
+  width: 24px;
+  height: 24px;
 }
 
 .header__toogle--close {
   mask-image: url("../../icons/stack.svg#close-menu");
+}
+
+
+.header__navigation {
+  width: 100%;
 }

@@ -29,7 +29,7 @@
 
 .programm-of-diet--cat-sit {
   background-image: url("../../icons/cat-sit.svg");
-  background-size: 50px 50px;
+  background-size: 50px 57px;
 }
 
 @media screen and (min-width: $tablet-width) {
@@ -46,7 +46,8 @@
 
 .programm-of-diet--cat-walk {
   background-image: url("../../icons/cat-walk.svg");
-  background-size: 60px 60px;
+  background-size: 67px 60px;
+  background-position: 12px 20px;
 }
 
 @media screen and (min-width: $tablet-width) {
@@ -66,9 +67,10 @@
 .programm-of-diet__title {
   @include null;
   font-size: 24px;
+  font-weight: 400;
   line-height: 34px;
   text-transform: uppercase;
-  padding: 30px 0 30px 100px;
+  padding: 33px 0 30px 90px;
   align-self: start;
 }
 
@@ -94,7 +96,7 @@
   font-family: $regular-font;
   font-size: 14px;
   line-height: 18px;
-  padding: 2px 20px 22px;
+  padding: 0 20px 22px;
   position: relative;
 }
 
@@ -137,6 +139,15 @@
   padding: 20px 50px 20px 20px;
   align-self: start;
 
+  &:hover {
+    &::after {
+      width: 32px;
+      height: 15px;
+      top: 35%;
+      transition: 0.3s;
+    }
+  }
+
   &:active {
     opacity: 0.3;
   }
@@ -149,10 +160,11 @@
   content: "";
   width: 24px;
   height: 12px;
-  top: 40%;
+  top: 38%;
   left: 120px;
   padding-top: 1px;
 }
+
 
 @media screen and (min-width: $tablet-width) {
   .programm-of-diet__link {
