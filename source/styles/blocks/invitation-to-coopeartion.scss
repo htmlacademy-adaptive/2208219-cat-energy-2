@@ -1,3 +1,50 @@
 .invitation-to-coopeartion {
   width: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: relative;
+  background-image: url("../../images/map-mobile@1x.png");
+  background-size: 100% auto, contain;
+  min-height: 454px;
+}
+
+@media screen and (min-resolution: 192dpi) {
+  .invitation-to-coopeartion {
+    background-image: url("../../images/map-mobile@2x.png");
+    background-size: 100% auto, contain;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .invitation-to-coopeartion {
+    background-image: url("../../images/map-tablet@1x.png");
+    background-size: 100% auto, cover;
+    min-height: 595px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .invitation-to-coopeartion {
+    background-image: url("../../images/map-tablet@2x.png");
+    background-size: 100% auto, cover;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .invitation-to-coopeartion {
+    background-image: url("../../images/map-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto, contain;
+    background-position: center;
+    min-height: 400px;
+  }
+}
+
+@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
+  .invitation-to-coopeartion {
+    background-image: url("../../images/map-desktop@2x.png");
+    background-color: $gray-bg;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }

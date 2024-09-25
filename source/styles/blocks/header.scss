@@ -44,15 +44,16 @@
 
 @media screen and (min-width: $desktop-width) {
   .header {
-    padding: 39px  85px 39px $desktop-padding;
-    width: 100%;
+    padding: 39px 85px 39px $desktop-padding;
     position: absolute;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     top: 0;
     box-sizing: border-box;
     background-color: transparent;
     justify-content: space-between;
     gap: 30px;
+    max-width: $desktop-width;
   }
 }
 

@@ -1,7 +1,7 @@
 /* в этот файл добавляет скрипты*/
 const button = document.querySelector('.header__toogle');
 const nav = document.querySelector('.navigation');
-const header = document.querySelector('.main__header');
+const header = document.querySelector('.header');
 const promo = document.querySelector('.promo');
 const OPEN = 'header__toogle--open';
 const CLOSE = 'header__toogle--close';
@@ -26,7 +26,9 @@ if (viewportWidth < 768) {
   nav.classList.add(HIDDEN);
   button.classList.remove(HIDDEN);
   header.classList.add(ABSOLUTE);
-  promo.classList.add(NOJS);
+  if (promo) {
+    promo.classList.add(NOJS);
+  }
 }
 
 const listItems = document.querySelectorAll('.adventures__item');
@@ -88,10 +90,14 @@ function getX(event) {
   return event.touches ? event.touches[0].clientX : event.clientX;
 }
 
-buttonSlider.addEventListener('mousedown', startDrag);
-document.addEventListener('mousemove', drag);
-document.addEventListener('mouseup', endDrag);
+if (buttonSlider) {
+  buttonSlider.addEventListener('mousedown', startDrag);
+  document.addEventListener('mousemove', drag);
+  document.addEventListener('mouseup', endDrag);
 
-buttonSlider.addEventListener('touchstart', startDrag);
-document.addEventListener('touchmove', drag);
-document.addEventListener('touchend', endDrag);
+  buttonSlider.addEventListener('touchstart', startDrag);
+  document.addEventListener('touchmove', drag);
+  document.addEventListener('touchend', endDrag);
+
+}
+
