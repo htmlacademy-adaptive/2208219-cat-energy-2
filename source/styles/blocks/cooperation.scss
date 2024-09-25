@@ -1,22 +1,26 @@
-.cooperation {
-  background-repeat: no-repeat;
-  background-position: bottom;
-  position: relative;
-  background-image: url("../../images/map-mobile@1x.png");
-  background-size: 100% auto, contain;
-  padding: 17px 0 360px;
+.cooperation iframe {
+  height: 362px;
+  width: 100%;
+
+  // карта должна быть на секции и тянутся на 100%, затем нужен контейнер, который уже будет центирровать содержимое и в который ты вставишь iframe
+}
+
+@media screen and (min-width: $tablet-width) {
+  .cooperation iframe {
+    height: 400px;
+  }
 }
 
 .cooperation__wrapper {
   display: flex;
   justify-content: space-between;
   background-color: $primary-bg;
-  padding: 10px 23px 5px 20px;
+  padding: 27px 23px 5px 20px;
 }
 
 @media screen and (min-width: 768px) {
   .cooperation__wrapper {
-    padding: 10px 20px;
+    padding: 56px 70px;
   }
 }
 
@@ -29,48 +33,6 @@
     top: 24%;
     left: calc(50% - 615px);
     box-sizing: border-box;
-  }
-}
-
-
-@media screen and (min-resolution: 192dpi) {
-  .cooperation {
-    background-image: url("../../images/map-mobile@2x.png");
-    background-size: 100% auto, contain;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .cooperation {
-    background-image: url("../../images/map-tablet@1x.png");
-    background-size: 100% auto, cover;
-    padding: 45px 50px 455px;
-  }
-}
-
-@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
-  .cooperation {
-    background-image: url("../../images/map-tablet@2x.png");
-    background-size: 100% auto, cover;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .cooperation {
-    background-image: url("../../images/map-desktop@1x.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    padding: 0 $desktop-padding 400px;
-  }
-}
-
-@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
-  .cooperation {
-    background-image: url("../../images/map-desktop@2x.png");
-    background-color: $gray-bg;
-    background-repeat: no-repeat;
-    background-position: center;
   }
 }
 
@@ -140,4 +102,3 @@
     gap: 20px;
   }
 }
-
