@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   gap: 140px;
 }
 
@@ -24,7 +23,7 @@
 
 .html-academy__icon {
   mask-image: url("../../icons/stack.svg#html-academy");
-  background-color: $black-bg;
+  background-color: $brown-bg;
   width: 27px;
   height: 34px;
 }

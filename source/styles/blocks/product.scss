@@ -31,9 +31,10 @@
   @include null;
   grid-area: title;
   font-size: 16px;
+  font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
-  padding: 20px 50px 0 0;
+  padding: 20px 65px 0 0;
 }
 
 @media screen and (min-width: $tablet-width) {
@@ -54,7 +55,7 @@
 .product__description {
   grid-area: compound;
   width: 100%;
-  padding: 10px 0 15px;
+  padding: 10px 18px 15px 0;
 }
 
 @media screen and (min-width: $tablet-width) {
@@ -78,7 +79,7 @@
 .product__button {
   grid-area: button;
   font-family: $primary-font;
-  width: 100%;
+  max-width: 100%;
 }
 
 @media screen and (min-width: $tablet-width) {
@@ -109,7 +110,7 @@
 
 .product.product--show-more {
   background-image: url("../../icons/stack.svg#plus");
-  background-position-y: 35px;
+  background-position-y: -65px;
   background-position-x: 50%;
   background-size: 10%;
   background-repeat: no-repeat;
@@ -119,7 +120,7 @@
 
 @media screen and (min-width: $tablet-width) {
   .product.product--show-more {
-    background-position-y: 135px;
+    background-position-y: -65px;
     background-size: 20%;
     background-color: $primary-bg;
   }

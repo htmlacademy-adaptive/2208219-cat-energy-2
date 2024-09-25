@@ -41,7 +41,7 @@ listItems.forEach((item, index) => {
   styleSheet.insertRule(`
           @media screen and (max-width: 767px) {
               .adventures__item:nth-child(${number})::before {
-                  content: none; /* Убираем содержимое псевдоэлемента */
+                  content: none;
               }
           }
       `, styleSheet.cssRules.length);

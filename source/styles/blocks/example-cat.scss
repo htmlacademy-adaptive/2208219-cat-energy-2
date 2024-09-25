@@ -15,7 +15,7 @@
 }
 
 .example-cat__wrapper {
-  padding: 25px $mobile-padding 40px;
+  padding: 25px $mobile-padding 38px;
   display: grid;
   grid-template-areas:
     "title"
@@ -28,7 +28,7 @@
 
 @media screen and (min-width: $tablet-width) {
   .example-cat__wrapper {
-    padding: 40px $tablet-padding 110px;
+    padding: 15px $tablet-padding 110px;
     grid-template:
       "title title title" 120px
       "description description description"
@@ -39,7 +39,7 @@
 
 @media screen and (min-width: $desktop-width) {
   .example-cat__wrapper {
-    padding: 60px $desktop-padding 70px;
+    padding: 6px $desktop-padding 70px;
     grid-template:
       "title       slider" 220px
       "description slider" 155px

@@ -1,17 +1,17 @@
 .cooperation {
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: bottom;
   position: relative;
-  padding: 20px 0 355px;
+  background-image: url("../../images/map-mobile@1x.png");
+  background-size: 100% auto, contain;
+  padding: 17px 0 360px;
 }
 
 .cooperation__wrapper {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
   background-color: $primary-bg;
-  padding: 10px 20px;
+  padding: 10px 23px 5px 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -78,6 +78,7 @@
   @include null;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
   text-transform: uppercase;
   min-width: 130px;
 }
@@ -94,6 +95,7 @@
   font-family: $regular-font;
   font-size: 14px;
   line-height: 20px;
+  color: $balck-gray-text;
 }
 
 @media screen and (min-width: $tablet-width) {
@@ -113,7 +115,7 @@
 .cooperation__icon-wrapper {
   position: absolute;
   left: calc(50% - 25px);
-  top: 55%;
+  top: 51%;
 }
 
 @media screen and (min-width: $tablet-width) {
@@ -129,3 +131,13 @@
     top: 33%;
   }
 }
+
+
+@media screen and (min-width: $tablet-width) {
+  .cooperation__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+

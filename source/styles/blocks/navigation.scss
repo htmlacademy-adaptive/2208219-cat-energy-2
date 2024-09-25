@@ -11,6 +11,7 @@
 
 .navigation__list {
   padding: 0;
+  padding-top: 4px;
   margin: 0;
   font-size: 20px;
   line-height: 20px;
@@ -29,15 +30,16 @@
     justify-content: end;
     gap: 35px;
     padding-right: 5px;
+    padding-top: 0;
     background-color: transparent;
   }
 }
 
 @media screen and (min-width: $desktop-width) {
   .navigation__list {
-    padding-right: 24px;
-    padding-top: 4px;
-    gap: 34px;
+    gap: 35px;
+    padding-top: 5px;
+    padding-right: 52px;
   }
 }
 
