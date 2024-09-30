@@ -2,41 +2,39 @@
   font-family: $regular-font;
   font-size: 12px;
   line-height: 16px;
+}
 
-  & th {
-    padding: 0;
-  }
+.compound__text th {
+  padding: 0;
+}
 
-  & td {
-    text-align: right;
-    padding: 0;
-  }
+.compound__text td {
+  text-align: right;
+  padding: 0;
 }
 
 @media screen and (min-width: $tablet-width) {
   .compound__text {
     font-size: 16px;
     line-height: 20px;
-    box-shadow: 0 1px $statistic-border;
+    box-shadow: 0 11px $gray-bg, 0 10px $statistic-border;
+  }
 
-    & th {
-      padding: 9px 0 0;
-    }
+  .compound__text th {
+    padding: 9px 0 0;
+  }
 
-    & td {
-      padding: 9px 0 0;
-    }
+  .compound__text td {
+    padding: 9px 0 0;
   }
 }
 
 @media screen and (min-width: $tablet-width) {
-  .compound__text {
-    & th {
-      padding: 10px 7px 0 0;
-    }
+  .compound__text th {
+    padding: 10px 7px 0 0;
+  }
 
-    & td {
-      padding: 10px 0 0;
-    }
+  .compound__text td {
+    padding: 10px 0 0;
   }
 }
