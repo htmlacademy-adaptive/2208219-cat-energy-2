@@ -42,7 +42,7 @@
     padding: 6px $desktop-padding 70px;
     grid-template:
       "title       slider" 220px
-      "description slider" 155px
+      "description slider" auto
       "statistic   slider" 100px
       "price       slider" 68px / 50% 50%;
   }
@@ -121,10 +121,10 @@
     padding: 20px 0 0 1px;
     place-self: center end;
     gap: 0;
+  }
 
-    & p {
-      @include null;
-    }
+  .example-cat__price p {
+    @include null;
   }
 }
 

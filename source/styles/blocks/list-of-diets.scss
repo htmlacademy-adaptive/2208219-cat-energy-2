@@ -1,6 +1,6 @@
 .list-of-diets {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   row-gap: 20px;
 }
 

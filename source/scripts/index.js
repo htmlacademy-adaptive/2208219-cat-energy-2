@@ -100,4 +100,3 @@ if (buttonSlider) {
   document.addEventListener('touchend', endDrag);
 
 }
-

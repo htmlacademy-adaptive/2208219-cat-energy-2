@@ -16,6 +16,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 0 0 19px;
+  margin: unset;
   border-bottom: 1px solid $gray-border;
 }
 
@@ -29,10 +30,17 @@
 
 @media screen and (min-width: $desktop-width) {
   .sub-products__item {
+    min-height: 57px;
     grid-column: 1;
     grid-template-columns: 1.3fr 0.7fr 0.7fr 1.4fr;
     padding: 0 0 13px;
     border-left: none;
+    border: unset;
+    border-bottom: 1px solid $gray-border;
+
+    &:first-of-type {
+      border-top: 1px solid $gray-border;
+    }
   }
 }
 
@@ -40,6 +48,7 @@
 .sub-products__title {
   @include null;
   font-size: 16px;
+  font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
   box-sizing: border-box;
@@ -67,6 +76,7 @@
   font-family: $regular-font;
   font-size: 14px;
   line-height: 14px;
+  margin: 14px 0;
 }
 
 @media screen and (min-width: $tablet-width) {
