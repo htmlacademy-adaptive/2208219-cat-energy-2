@@ -44,7 +44,7 @@
   }
 }
 
-.adventure__description {
+.adventures__description {
   @include null;
   font-family: $regular-font;
   font-size: 14px;
@@ -54,7 +54,7 @@
 }
 
 @media screen and (min-width: $tablet-width) {
-  .adventure__description {
+  .adventures__description {
     padding: 25px 50px 0 0;
     font-size: 16px;
     line-height: 24px;
@@ -62,7 +62,7 @@
 }
 
 @media screen and (min-width: $desktop-width) {
-  .adventure__description {
+  .adventures__description {
     padding: 26px 0 30px;
   }
 }
